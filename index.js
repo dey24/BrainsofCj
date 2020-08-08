@@ -27,6 +27,11 @@ function barchart(){
                 chartElems.push(bar);
             });
         };
+
+        const update = (newData) => {
+            if(newData.length> chartElems.length) {
+                create(newData.filter(((e,i) => i > chartElems.length - 1)));
+        }
     }
             
 };
